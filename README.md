@@ -38,6 +38,8 @@ const contractAddress = '5H2EXJWscxyMLjmxKP2KhJmQ6JsUr67MQfgEoUUkrizXVgbz';
 
     wsApi.disconnect();
 })();
+```
+  
   
 In order to help us shed some light on the question of the ```metadata```....
   
