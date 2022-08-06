@@ -84,7 +84,7 @@ So now I have:
 5 directories, 4 files
 ```
   
-Now, ```cd`` into ```helloworld2```, and edit ```Cargo.toml```.  
+Now, ```cd``` into ```helloworld2```, and edit ```Cargo.toml```.  
   
 Right near the top, under the ```[package]``` section, find the ```name = ``` and make sure it says ```helloworld2```.  Save and exit.
  
