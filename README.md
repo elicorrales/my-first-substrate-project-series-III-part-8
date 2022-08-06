@@ -187,3 +187,15 @@ Because in this case, the ```metadata``` matches/contains the ```sayhello2``` fu
 > As such, the gas limit works as a security mechanism
 > that prevents high fees from being incorrectly charged
 > due to a bug or error in a smart contract.  
+
+So I programmed a loop where I started the gasLimit at some level that caused an error, and the loop incremented the gasLimit, and re-tried to call the contract ```sayhello```, until I found the magic number.
+```
+    //let gasLimit = 74999922687; //causes error - gasLimit too low
+    let gasLimit   = 74999922688; // returns an OK result
+    let { result } = await contract.query.sayhello(aliceAddress, { gasLimit });
+    console.log('gasLimit:', gasLimit, ',  result:', result.toHuman());
+```
+
+# Last Thing - The Debug Messages, The Panic Message
+  
+
