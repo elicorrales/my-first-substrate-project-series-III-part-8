@@ -122,7 +122,41 @@ cargo contract instantiate \
   --code-hash $code_hash
 ```
   
-(make sure you copiked the ```Contract``` value.)  
+(make sure you copied the ```Contract``` value.)  
 
 
 
+## Now Run Client  
+  
+Make sure that the ```contractAddress``` matches the value you copied from ```Contract``` when you instantiated.  
+  
+Make sure your ```metadataPath = ``` contains the path to ```helloworld/target/ink/metadata.json```.
+  
+Run the client.  
+  
+You should see proper output on both client and substrate node.  
+  
+## Now Change ```metadataPath```
+  
+Change the path from containing ```helloworld```, to ```helloworld2```.  
+  
+Re-run the client.  
+  
+What do you see?  
+  
+It complains about ```sayhello``` is not a function.  
+  
+We do know that it **is** a function of the uploaded/instantiated ```helloworld```.
+  
+## Now Change The Function Call
+  
+Now, change the the ```metadataPath``` back to the original ```helloworld```.  
+  
+Find in the code where it calls ```sayhello``` and change it to ```sayhello2```.  
+  
+Re-run the client.
+  
+What do you see?
+  
+
+  
