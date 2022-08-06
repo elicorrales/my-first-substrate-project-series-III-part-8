@@ -40,6 +40,8 @@ const contractAddress = '5H2EXJWscxyMLjmxKP2KhJmQ6JsUr67MQfgEoUUkrizXVgbz';
 })();
 ```
   
+# Why ```metadata```?  
+  
   
 In order to help us shed some light on the question of the ```metadata```....
   
@@ -156,5 +158,32 @@ Re-run the client.
   
 What do you see?
   
-
+This error is interesting.  The previous error was a local stack trace by the client.  
   
+This current error is a result of what the contracts-node returned.  
+  
+Why?  
+  
+Because in this case, the ```metadata``` matches/contains the ```sayhello2``` function, **BUT** when we tried to call it on the instantiated contract, it errored because it doesn't really exist.  
+  
+  
+## What Did We Learn?  
+  
+- The ```metadata``` is used for some checking, but in the end, it has to match what is deployed.
+
+
+# What Is ```gasLimit```?  
+  
+> The term gas limit refers to the maximum price 
+> a cryptocurrency user is willing to pay 
+> when sending a transaction, 
+> or performing a smart contract function.
+
+> These fees are calculated in gas unit,
+> and the gas limit defines the maximum value 
+> that the transaction or function can "charge" 
+> or take from the user.
+
+> As such, the gas limit works as a security mechanism
+> that prevents high fees from being incorrectly charged
+> due to a bug or error in a smart contract.  
