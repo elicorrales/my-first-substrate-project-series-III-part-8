@@ -150,8 +150,6 @@ We do know that it **is** a function of the uploaded/instantiated ```helloworld`
   
 ## Now Change The Function Call
   
-Now, change the the ```metadataPath``` back to the original ```helloworld```.  
-  
 Find in the code where it calls ```sayhello``` and change it to ```sayhello2```.  
   
 Re-run the client.
