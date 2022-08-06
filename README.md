@@ -91,6 +91,38 @@ Right near the top, under the ```[package]``` section, find the ```name = ``` an
 Next, edit ```lib.rs```.   Everywhere you see ```Hello```, ```hello```, ```helloworld```, ```HelloWorld```, ```sayhello```, ```saybye``` - add a ```2``` at the end of the word.  
   
 
+## Build Both Contracts
+
+Go into each of those directories and do a ```cargo +nightly contract build```.  
   
+
+## Start ```substrate-contracts-node```  
+  
+```
+substrate-contracts-node --dev --detailed-log-output -lruntime::contracts=trace
+```
+  
+## Upload And Instantiate ```helloworld```, But NOT ```helloworld2```.  
+  
+```
+cargo contract upload --suri //Alice
+```
+  
+(make sure you copied the ```Hash code``` value.)  
+   
+```
+hash_code=<the hash code you copied>  
+```
+  
+```
+cargo contract instantiate \
+  --gas 500000000000 \
+  --constructor new \
+  --suri //Alice \
+  --code-hash $code_hash
+```
+  
+(make sure you copiked the ```Contract``` value.)  
+
 
 
